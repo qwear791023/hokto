@@ -1,0 +1,101 @@
+#s05 {
+    background-color: #61332c;
+    text-align: center;
+
+    .list_group { 
+        margin: 0 auto; 
+        display: flex;
+        justify-content: space-between;
+
+        .list_item.hover.active {
+            .a { display: none!important; }
+            .b { display: block!important; }
+        }
+    }
+
+    .swots{ 
+        margin-top: -2px;
+        text-align: center;
+        position: relative;
+
+        .pc img { width: calc(36vw + 437.27px); }
+        .mobile img { width: 95.6vw; }
+        .pc, .mobile {
+            img.active { display: inline; }
+            img:not(.active) { display: none; }
+        }
+
+        .btn_lightbox { position: absolute; }
+
+    }
+
+    .panel_lightbox {
+        &[class*="item"] { display: block; }
+        &>img { 
+            top: calc(30vh + 10px);
+            max-width: 90vw;
+            max-height: 68vh;
+            position: absolute;
+            opacity: 0; 
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.item1 { [src*="item1"] { opacity: 1; } }
+        &.item2 { [src*="item2"] { opacity: 1; } }
+        &.item3 { [src*="item3"] { opacity: 1; } }
+        &.item4 { [src*="item4"] { opacity: 1; } }
+        &.item5 { [src*="item5"] { opacity: 1; } }
+        .btn_close { 
+            position: absolute; 
+            bottom: calc(70vh + 10px);
+            width: 62px;
+            max-width: 7vh; 
+        }
+    }
+
+    
+    @media ( min-width:768px ) {
+        background-image: url(../imgs/s05/bg.gif);
+        background-repeat: no-repeat;
+        background-size: calc(max(1900px, 100vw)) auto;
+        background-position: bottom 45px center;
+        padding-bottom: calc(1.11vw + 51.455px);
+
+        .title { width: calc(14.589vw + 172.8px); }
+
+        .list_group {
+            margin-top: calc(1.945vw + 17px);
+            width: calc(19.8vw + 238.7px);
+            .list_item { width: 16.1%; }
+        }
+
+        .btn_lightbox {
+            width: calc(8.93vw + 106.327px);
+            top: 66.67%;
+            left: calc(46.42vw - 47px);
+        }
+
+        .btn_close { left: calc(50vw + 30vh); }
+    }
+    
+    @media ( max-width:768px ) {
+        padding-bottom: 5.5vw;
+
+        .title { width: 89.2vw; }
+        
+        .list_group {
+            margin-top: 7.7vw;
+            width: 85vw;
+            .list_item { width: 17.4%; }
+        }
+
+        .btn_lightbox {
+            width: 45.2vw;
+            top: 83.07%;
+            left: 8.1vw;
+        }
+
+        .btn_close { left: calc(90vw - 7vh); }
+
+    }
+}

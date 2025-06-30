@@ -1,0 +1,56 @@
+#s04 {
+    background: #61332c;
+    text-align: center;
+    position: relative;
+    .mushroom { position: absolute; }
+    .txt {
+        .pc { width: calc(42.22vw + 336.31px); }
+        .mobile { width: 95vw; }
+    }
+    
+    @media ( min-width:768px ) {
+        padding-top: calc(1.88vw + 15.47px);
+        padding-bottom: calc(2.66vw + 19.5px);
+        .title {
+            margin-bottom: calc(1.44vw + 10.89px);
+            width: calc(21.11vw + 167.655px);
+        }
+        .roulette { width: calc(30.77vw + 246.32px); }
+        .txt { margin-top: calc(-4.11vw - 36.4px); }
+        .mushroom {
+            &.left {
+                width: calc(2.83vw + 29.24px);
+                top: calc(15vw + 192.412px);
+                left: calc(35.54vw - 175.33px);
+            }
+            &.right {
+                width: calc(3.36vw + 41.16px);
+                top: calc(13.42vw + 167.876px);
+                left: calc(60.74vw + 120.89px);
+            }
+        }
+    }
+    
+    @media ( max-width:768px ) {
+        padding-top: 4.3vw;
+        padding-bottom: 12.4vw;
+        .title {
+            margin-bottom: 3.6vw;
+            width: 81vw;
+        }
+        .roulette { width: 98.5%; }
+        .txt { margin-top: -2vw; }
+        .mushroom {
+            &.left {
+                width: 10.7vw;
+                top: 54.9vw;
+                left: 8.5vw;
+            }
+            &.right {
+                width: 13.7vw;
+                top: 50.5vw;
+                left: 82vw;
+            }
+        }
+    }
+}

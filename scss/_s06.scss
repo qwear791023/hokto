@@ -1,0 +1,345 @@
+#s06 {
+    background: url(../imgs/bg.jpg) repeat;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+
+    .bg { width: calc(max(1900px, 100vw)); }
+
+    [class*="dish"], .pic, .taste, a, .txt { position: absolute; }
+    a { z-index: 2; }
+    .txt img { width: 100%; }
+    
+    @media ( min-width:768px ) {
+        margin-top: calc(-0.97vw - 3.53px);
+        height: calc(67.8vw + 742.63px);
+
+        .title { 
+            width: calc(16.6vw + 201.45px); 
+            margin-top: calc(4.152vw + 38.11px);
+        }
+
+        .pic { 
+            height: 100%; 
+            top: 0;
+        }
+        .dish1, .dish3, .dish5 { .pic { left: 0; } }
+        .dish2, .dish4, .dish6 { .pic { right: 0; } }
+
+        a { width: calc(2.385vw + 22.68px); }
+        .taste { width: calc(3.887vw + 46.15px); }
+
+        .dish1 {
+            width: calc(25.97vw + 285.54px);
+            height: calc(12vw + 138.73px);
+            top: calc(9.37vw + 118px);
+            left: calc(30.65vw - 206.42px);
+            .taste {
+                top: 56.94%;
+                left: 56.6%;
+            }
+            .txt {
+                width: 32.87%;
+                top: 22%;
+                left: 67.13%;
+            }
+            a {
+                top: 43.87%;
+                left: 67.13%;
+            }
+        }
+
+        .dish2 {
+            width: calc(23.41vw + 282.2px);
+            height: calc(13.07vw + 159.6px);
+            top: calc(14.5vw + 176.73px);
+            left: calc(45vw - 57.33px);
+            .taste {
+                bottom: 0;
+                right: 45.11%;
+            }
+            .txt {
+                width: 37.14%;
+                top: 60.05%;
+                left: 0;
+            }
+            a {
+                top: 79.16%;
+                right: 62.86%;
+            }
+        }
+
+        .dish3 {
+            width: calc(24.82vw + 301.35px);
+            height: calc(13.25vw + 161.23px);
+            top: calc(23.4vw + 285.21px);
+            left: calc(30.56vw - 210.74px) ;
+            .taste {
+                top: 65.6%;
+                left: 48.38%;
+            }
+            .txt {
+                width: 40.1%;
+                top: 40.19%;
+                left: 59.9%;
+            }
+            a {
+                top: 59.33%; 
+                left: 59.9%;
+            }
+        }
+
+        .dish4 {
+            width: calc(25.265vw + 317px);
+            height: calc(11.84vw + 140.09px);
+            top: calc(30.83vw + 375.22px);
+            left: calc(42.4vw - 99.65px);
+            .taste {
+                top: 63.3%;
+                left: 35%;
+            }
+            .txt {
+                width: 30.36%;
+                top: 67.67%;
+                left: 0;
+            }
+            a {
+                bottom: 0;
+                right: 69.64%;
+            }
+        }
+
+        .dish5 {
+            width: calc(22.44vw + 270.67px);
+            height: calc(12.1vw + 149px);
+            top: calc(42.26vw + 510.7px);
+            left: calc(31.8vw - 213.24px);
+            .taste {
+                top: 46.17%;
+                left: 60.11%;
+            }
+            .txt {
+                width: 32.71%;
+                top: 25.33%;
+                left: 67.29%;
+                z-index: 2;
+            }
+            a {
+                top: 48%;
+                left: 90.1%;
+            }
+        }
+
+        .dish6 {
+            width: calc(22.08vw + 269.4px);
+            height: calc(14.04vw + 171.13px);
+            top: calc(50.58vw + 550px);
+            left: calc(45.85vw - 49px);
+            .taste {
+                top: 68.26%;
+                left: 28.88%;
+            }
+            .txt {
+                width: 27.72%;
+                top: 73.516%;
+                left: 0;
+                z-index: 2;
+            }
+            a {
+                top: 91.78%;
+                left: 17.8%;
+            }
+        }
+    }
+    
+    @media ( max-width:768px ) {
+        margin-top: -2.9vw;
+        height: 384vw;
+
+        .title { 
+            width: 81.3vw; 
+            margin-top: 14.2vw;
+        }
+
+        a { width: 13.5vw; }
+        .taste { width: 20.7vw; }
+
+
+        .dish1 {  
+            // top: 41.1vw;
+            // left: 1.3vw;
+            .pic { 
+                top: calc(-41.1vw + 41.1vw);
+                left: 1.3vw;
+                width: 63.7vw;
+            }
+            .taste {
+                // top: 30.5vw;
+                // left: 42.6vw;
+                top: calc(-41.1vw + 30.5vw + 41.1vw);
+                left: calc(42.6vw + 1.3vw);
+            }
+            .txt { 
+                // top: 8.2vw;
+                // left: 66vw;
+                width: 22.86vw;
+                top: calc(-41.1vw + 8.2vw + 41.1vw);
+                left: calc(66vw + 1.3vw);
+            }
+            a {
+                // top: 39.5vw;
+                // left: 66vw;
+                top: calc(-41.1vw + 41.1vw + 39.5vw);
+                left: calc(66vw + 1.3vw);
+            }
+        }
+
+        .dish2 {
+            // top:  93.9vw;
+            // left: 5.7vw;
+            .pic { 
+                top: calc(-41.1vw + 93.9vw);
+                left: 39.6vw;
+                width: 59vw;
+            }
+            .taste {
+                // bottom: 0;
+                // left: 38.6vw;
+                top: calc(-41.1vw + 39.2vw + 93.9vw);
+                left: calc(38.6vw + 5.7vw);
+                z-index: 2;
+            }
+            .txt {
+                width: 31.3vw;
+                // top: 12.5vw;
+                // left: 0;
+                top: calc(-41.1vw + 12.5vw + 93.9vw);
+                left: 5.7vw;
+            }
+            a {
+                // top: 37.5vw;
+                // left: 0;
+                top: calc(-41.1vw + 37.5vw + 93.9vw);
+                left: 5.7vw;
+            }
+        }
+
+        .dish3 {
+            // top: 152.7vw ;
+            // left: 1.4vw;
+            .pic { 
+                top: calc(-41.1vw + 152.7vw);
+                left: 1.4vw;
+                width: 57.4vw;
+            }
+            .taste {
+                // top: 37.9vw;
+                // left: 5.2vw;
+                top: calc(-41.1vw + 37.9vw + 152.7vw);
+                left: calc(5.2vw + 1.4vw);
+            }
+            .txt {
+                // top: 10.3vw;
+                // left: 59.5vw;
+                width: 33.9vw;
+                top: calc(-41.1vw + 10.3vw + 152.7vw);
+                left: calc(59.5vw + 1.4vw);
+            }
+            a {
+                // top: 39.2vw;
+                // left: 59.5vw;
+                top: calc(-41.1vw + 152.7vw + 39.2vw);
+                left: calc(59.5vw + 1.4vw);
+            }
+        }
+
+        .dish4 {
+            // top: 208.9vw;
+            // left: 5.6vw;
+            .pic { 
+                top: calc(-41.1vw + 208.9vw);
+                left: 39.3vw;
+                height: 54.7vw; 
+            }
+            .taste {
+                // top: 29.2vw;
+                // left: 33.2vw;
+                top: calc(-41.1vw + 29.2vw + 208.9vw);
+                left: calc(33.2vw + 5.6vw);
+            }
+            .txt {
+                width: 30.9vw;
+                // top: 12vw;
+                // left: 0;
+                top: calc(-41.1vw + 12vw + 208.9vw);
+                left: 5.6vw;
+            }
+            a {
+                // top: 42.8vw;
+                // left: 0;
+                top: calc(-41.1vw + 42.8vw + 208.9vw);
+                left: 5.6vw;
+            }
+        }
+
+        .dish5 {
+            // top: 266.1vw;
+            // left: 3.5vw;
+            .pic { 
+                top: calc(-41.1vw + 266.1vw);
+                left: 3.5vw;
+                width: 58.9vw; 
+            }
+            .taste {
+                // top: 29.8vw;
+                // left: 0.8vw;
+                top: calc(-41.1vw + 266.1vw + 29.8vw);
+                left: calc(0.8vw + 3.5vw);
+            }
+            .txt {
+                // top: 6vw; 
+                // left: 61.3vw;
+                width: 27.5vw;
+                top: calc(-41.1vw + 6vw + 266.1vw);
+                left: calc(61.3vw + 3.5vw);
+            }
+            a {
+                // top: 36.3vw;
+                // left: 61.3vw;
+                top: calc(-41.1vw + 36.3vw + 266.1vw);
+                left: calc(61.3vw + 3.5vw);
+            }
+        }
+
+        .dish6 {
+            // top: 315.8vw;
+            // left: 7.8vw;
+            .pic { 
+                top: calc(-41.1vw + 315.8vw);
+                left: 38.5vw;
+                width: 57.4vw; 
+            }
+            .taste {
+                // top: 37.2vw;
+                // left: 65.8vw;
+                top: calc(-41.1vw + 37.2vw + 315.8vw);
+                left: calc(65.8vw + 7.8vw);
+            }
+            .txt {
+                // top: 23vw;
+                // left: 0;
+                width: 25.9vw;
+                top: calc(-41.1vw + 315.8vw + 23vw);
+                left: 7.8vw;
+            }
+            a {
+                // top: 49.9vw;
+                // left: 0;
+                top: calc(-41.1vw + 49.9vw + 315.8vw);
+                left: 7.8vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+#s02 {
+    position: relative;
+    overflow: hidden;
+
+    .title {
+        text-align: center;
+        .pc { width: calc(16.52vw + 202px); }
+        .mobile { width: 82vw; }
+    }
+
+    .qa {
+        .pc {
+
+            .questions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: calc(49.3vw + 272.43px);
+                margin: 0 auto;
+                margin-top: calc(0.97vw + 6.5px);
+                margin-bottom: calc(5.65vw + 69.58px);
+
+                img { cursor: pointer; }
+
+                div.active div {
+                    .a { display: none; }
+                    .b { display: block; }
+                }
+                div:not(.active) div {
+                    .b { display: none; }
+                    .a { display: block; }
+                }
+
+                .q1 .plate img { width: calc(11.3vw + 135.16px); }
+                .q2 .plate img { width: calc(8.745vw + 103.83px); }
+                .q3 .plate img { width: calc(7.95vw + 98px); }
+
+                &>div { position: relative; }
+
+                [class*="arrow"], [class*="mushroom"] { 
+                    position: absolute; 
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                [class*="arrow"] { height: calc(1.23vw + 14.5px); }
+
+                [class*="mushroom"]>img { height: calc(3.27vw + 36.9px); }
+
+                .arrow1 { top: calc(4.77vw + 57.36px); }
+                .arrow2 { top: calc(5.92vw + 73.54px); }
+                .arrow3 { top: calc(4.41vw + 55px); }
+                .mushroom1 { top: calc(6.45vw + 80.47px); }
+                .mushroom2 { top: calc(7.33vw + 95.7px); }
+                .mushroom3 { top: calc(6vw + 77.86px); }
+            }
+
+            [class*="answer"] {
+                display: block;
+                max-height: calc(16vw + 162px);
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -90px;
+                opacity: 0;
+                transition: all .5s ease-in-out;
+
+                &.active {
+                    opacity: 1;
+                    bottom: 0;
+                }
+            }
+        }
+
+
+        .mobile {
+            position: relative;
+            [class*="_mobile"] {
+                position: absolute;
+                bottom: 19vw;
+                [src*="mobile"] { width: 100%; }
+            }
+            .qa1_mobile { opacity: 1; }
+            .qa2_mobile, .qa3_mobile { transform: translateX(-100%); }
+            img { display: block; }
+
+
+            .qa_btn {
+                text-align: center;
+                margin-top: 152vw;
+                padding-top: 2vw;
+                padding-bottom: 5vw;
+                background-color: #f09800;
+
+                button { 
+                    width: 10vw; 
+                    &.btn_next { margin-left: 7vw; }
+                }
+            }
+        }
+    }
+
+    @media ( min-width:768px ) {
+        background: url(../imgs/s02/bg.png) bottom center no-repeat, url(../imgs/bg.jpg) left top repeat;
+        background-size: auto calc(18.11vw + 222.9px), auto;
+        height: calc(33.13vw + 419.6px);
+        padding-top: calc(0.83vw + 23.2px);
+    }
+    
+    @media ( max-width:768px ) {
+        background: url(../imgs/bg.jpg) repeat;
+        padding-top: 8vw;
+    }
+}
+
+.slide-left-in { animation: slide-left-in 1s ease-in-out forwards; }
+.slide-right-in { animation: slide-right-in 1s ease-in-out forwards; }
+.slide-right-out { animation: slide-right-out 1s ease-in-out forwards; }
+.slide-left-out { animation: slide-left-out 1s ease-in-out forwards; }
+
+@keyframes slide-left-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+@keyframes slide-left-out {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes slide-right-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+@keyframes slide-right-out {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
